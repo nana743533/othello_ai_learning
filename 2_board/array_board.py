@@ -176,3 +176,12 @@ class othello:
         
         # 石数表示
         print('黒 X ', self.n_stones[0], '-', self.n_stones[1], ' O 白')
+
+if __name__ == "__main__":
+    game = othello()
+    game.check_legal()
+    game.print_info()
+    while True:
+        game.move_stdin()
+        game.check_legal()
+        game.print_info()
